@@ -7,7 +7,7 @@
   --color-white: #ffffff;
   --color-dark: #1b1919;
   --color-light-blue: #d1ecfe;
-  --color-dark-background: #000;
+  --color-black: #000;
   --color-light-background: lch(93.05% 0.01 296.81);
 
   /* Spacing */
@@ -33,7 +33,7 @@
   --font-size-4x: 4.8rem;
 
   /* Font Weights */
-  --font-weight-medium: 500;
+  --font-weight-medium: 600;
   --font-weight-bold: 700;
 
   /* Border Radius */
