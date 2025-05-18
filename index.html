@@ -34,7 +34,7 @@
             <a href="#milestone-tracker" class="nav__link">Milestones</a>
           </li>
           <li class="nav__item">
-            <a href="#development-info" class="nav__link">Development</a>
+            <a href="#development-info" class="nav__link">Our Activity</a>
           </li>
           <li class="nav__item">
             <a href="#parenting-tips" class="nav__link">Parenting</a>
@@ -62,24 +62,24 @@
     </header>
 
     <main class="main-container">
-      <section class="hero__content section">
+      <section class="hero__content section" id="home">
         <aside class="hero__sidebar">
           <ul class="list-group">
             <li class="list-group-item active" aria-current="true">
               Milestones
             </li>
-            <li class="list-group-item">2 Months</li>
-            <li class="list-group-item">4 Months</li>
-            <li class="list-group-item">6 Months</li>
-            <li class="list-group-item">9 Months</li>
-            <li class="list-group-item">1 year</li>
-            <li class="list-group-item">15 Months</li>
-            <li class="list-group-item">18 Months</li>
-            <li class="list-group-item">2 Years</li>
-            <li class="list-group-item">30 Months</li>
-            <li class="list-group-item">3 Years</li>
-            <li class="list-group-item">4 Years</li>
-            <li class="list-group-item">5 Years</li>
+            <li class="list-group-item" data-id="1">2 Months</li>
+            <li class="list-group-item" data-id="2">4 Months</li>
+            <li class="list-group-item" data-id="3">6 Months</li>
+            <li class="list-group-item" data-id="4">9 Months</li>
+            <li class="list-group-item" data-id="5">1 Year</li>
+            <li class="list-group-item" data-id="6">15 Months</li>
+            <li class="list-group-item" data-id="7">18 Months</li>
+            <li class="list-group-item" data-id="8">2 Years</li>
+            <li class="list-group-item" data-id="9">30 Months</li>
+            <li class="list-group-item" data-id="10">3 Years</li>
+            <li class="list-group-item" data-id="11">4 Years</li>
+            <li class="list-group-item" data-id="12">5 Years</li>
           </ul>
         </aside>
 
@@ -104,10 +104,28 @@
           </div>
         </div>
       </section>
+      <section class="milestones__section section">
+        <div class="milestones-section">
+          <h1 class="milestones-section__title section__title">
+            Important Milestones-Your baby Development
+          </h1>
+          <p class="milestones-section__description">
+            Developmental milestones are key achievements that most children
+            (75% or more) reach by certain ages. As children grow, they undergo
+            significant changes in how they play, communicate, move, and think.
+            Tracking these milestones offers a helpful roadmap for parents,
+            helping them understand their child’s development.
+          </p>
+        </div>
+
+        <div class="milestones-section__cards"></div>
+      </section>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       defer
     ></script>
+
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
