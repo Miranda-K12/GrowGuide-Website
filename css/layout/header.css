@@ -4,6 +4,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  right: 0;
 }
 
 .header__logo {
@@ -84,20 +89,10 @@
   position: relative;
   font-weight: var(--font-weight-medium);
   text-decoration: none;
+  transition: all 0.3s ease-out;
 }
 
-.nav__link::after {
-  content: "";
-  display: block;
-  height: 2px;
-  background-color: var(--color-white);
-  width: 0;
-  transition: width 0.3s ease;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-}
-
-.nav__link:hover::after {
-  width: 100%;
+.nav__link:hover {
+  transform: scale(1.05);
+  font-weight: var(--font-weight-bold);
 }

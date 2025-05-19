@@ -6,7 +6,6 @@ export const handleAgeCategories = (data) => {
 
   sidebarButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      // Remove active class from all buttons
       sidebarButtons.forEach((btn) => btn.classList.remove("active"));
 
       button.classList.add("active");
