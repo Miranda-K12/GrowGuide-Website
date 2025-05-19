@@ -39,6 +39,7 @@
           <li class="nav__item">
             <a href="#parenting-tips" class="nav__link">Parenting</a>
           </li>
+          <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li>
           <li class="nav__item">
             <a href="#community" class="nav__link">Community</a>
           </li>
@@ -55,70 +56,194 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
-        <div class="toggle-theme">
-          <i class="fa-solid fa-moon toggle-theme-icon"></i>
-        </div>
       </div>
     </header>
 
     <main class="main-container">
       <section class="hero__content section" id="home">
-        <aside class="hero__sidebar">
-          <ul class="list-group">
-            <li class="list-group-item active" aria-current="true">
-              Milestones
-            </li>
-            <li class="list-group-item" data-id="1">2 Months</li>
-            <li class="list-group-item" data-id="2">4 Months</li>
-            <li class="list-group-item" data-id="3">6 Months</li>
-            <li class="list-group-item" data-id="4">9 Months</li>
-            <li class="list-group-item" data-id="5">1 Year</li>
-            <li class="list-group-item" data-id="6">15 Months</li>
-            <li class="list-group-item" data-id="7">18 Months</li>
-            <li class="list-group-item" data-id="8">2 Years</li>
-            <li class="list-group-item" data-id="9">30 Months</li>
-            <li class="list-group-item" data-id="10">3 Years</li>
-            <li class="list-group-item" data-id="11">4 Years</li>
-            <li class="list-group-item" data-id="12">5 Years</li>
-          </ul>
-        </aside>
-
-        <div class="hero__content-wrapper">
-          <img
-            src="./images/hero-image.jpg"
-            alt="child with parent"
-            class="hero-img"
-          />
-          <div class="hero__content-wrapper-text">
-            <p class="hero__text-description">
-              At <span>GrowGuide</span>,we help parents nurture every part of
-              their child’s growth — from feelings and learning to moving and
-              playing. With easy-to-follow tips and trusted advice, we’re here
-              to support your family’s journey, every step of the way. Explore
-              age-specific milestones and practical advice tailored to your
-              child’s unique growth path.
-            </p>
-            <a href="#parenting-tips" class="blue-button hero-button"
-              >Explore more</a
-            >
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <!-- Indicators (dots) -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
           </div>
+
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./images/family-image.jpg"
+                class="d-block w-100"
+                alt="Family Image"
+              />
+              <div class="carousel-caption">
+                <h1>Supporting Every Step</h1>
+                <p>
+                  We help parents nurture every part of their child’s growth —
+                  from feelings and learning to moving and playing.
+                </p>
+                <a href="#milestone-tracker" class="blue-button"
+                  >Explore Milestones</a
+                >
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/children-playing.jpg"
+                class="d-block w-100"
+                alt="Children Playing"
+              />
+              <div class="carousel-caption">
+                <h1>Track Their Growth</h1>
+                <p>
+                  Understand your child’s development across stages — from
+                  movement to social skills.
+                </p>
+                <a href="#milestone-tracker" class="blue-button"
+                  >Track Progress</a
+                >
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="./images/parenting.jpg"
+                class="d-block w-100"
+                alt="Parent Workshop"
+              />
+              <div class="carousel-caption">
+                <h1>Together, We Make Parenting Easier</h1>
+                <p>
+                  Join workshops, explore parenting tips, and connect with a
+                  supportive community.
+                </p>
+                <a href="#parenting-tips" class="blue-button"
+                  >See Parenting Tips</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrows -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </section>
-      <section class="milestones__section section">
+
+      <section class="milestones__section section" id="milestone-tracker">
         <div class="milestones-section">
           <h1 class="milestones-section__title section__title">
-            Important Milestones-Your baby Development
+            <span class="gradient-title">Important Milestones</span>-Your baby
+            Development
           </h1>
-          <p class="milestones-section__description">
-            Developmental milestones are key achievements that most children
-            (75% or more) reach by certain ages. As children grow, they undergo
-            significant changes in how they play, communicate, move, and think.
-            Tracking these milestones offers a helpful roadmap for parents,
-            helping them understand their child’s development.
-          </p>
+        </div>
+
+        <div class="age-categories-box">
+          <div
+            class="btn-group flex-wrap w-100"
+            role="group"
+            aria-label="Milestone navigation"
+          >
+            <button type="button" class="btn btn-outline-primary" data-id="1">
+              2 Months
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-id="2">
+              4 Months
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-id="3">
+              6 Months
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-id="4">
+              9 Months
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-id="5">
+              1 Year
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-id="6">
+              15 Months
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-id="7">
+              18 Months
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-id="8">
+              2 Years
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-id="9">
+              30 Months
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-id="10">
+              3 Years
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-id="11">
+              4 Years
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-id="12">
+              5 Years
+            </button>
+          </div>
         </div>
 
         <div class="milestones-section__cards"></div>
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link prev" href="#">Previous</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" data-page="1">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" data-page="2">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" data-page="3">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link next" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
       </section>
     </main>
     <footer class="footer">

@@ -9,6 +9,7 @@
   padding: 1.5rem;
   text-align: center;
 }
+
 .milestones-section__description {
   font-size: var(--font-size-lg);
 }
@@ -19,6 +20,14 @@
   gap: var(--spacing-lg);
 }
 
+.btn-outline-primary {
+  font-size: var(--font-size-lg);
+}
+.btn-outline-primary:hover {
+  background-color: var(--color-light-blue);
+  color: var(--color-dark);
+  font-weight: var(--font-weight-medium);
+}
 .card {
   border: 1px solid var(--color-light-blue);
   cursor: pointer;
@@ -31,7 +40,14 @@
   gap: var(--spacing-md);
   background-color: var(--color-light-blue);
 }
-
+.zooming-card {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: transform 0.5s ease-out, opacity 0.6s ease-out;
+}
+.zoomed-in {
+  animation: zooming 0.6s ease-out forwards;
+}
 .card-title {
   color: var(--color-primary);
   font-size: var(--font-size-xl);
@@ -94,4 +110,16 @@
   bottom: var(--spacing-xxl);
   right: var(--spacing-xxl);
   cursor: pointer;
+}
+.pagination {
+  margin-top: var(--spacing-md);
+  display: flex;
+  justify-content: flex-end;
+}
+.page-link {
+  font-size: var(--font-size-lg);
+  padding: 0 var(--spacing-sm);
+}
+.img-animation {
+  animation: zooming 0.8s ease-out forwards;
 }

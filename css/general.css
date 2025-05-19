@@ -8,7 +8,6 @@
   --color-dark: #1b1919;
   --color-light-blue: #d1ecfe;
   --color-black: #000;
-  --color-light-background: lch(93.05% 0.01 296.81);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -72,7 +71,14 @@ body {
   font-size: var(--font-size-xxx);
   margin-bottom: var(--spacing-lg);
   font-weight: var(--font-weight-bold);
+  font-style: italic;
 }
+.gradient-title {
+  background: linear-gradient(45deg, #2f80ed, #56ccf2);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .section__subtitle {
   background-color: var(--color-primary);
   font-weight: var(--font-weight-bold);
