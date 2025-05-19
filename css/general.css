@@ -74,9 +74,7 @@ body {
   font-style: italic;
 }
 .gradient-title {
-  background: linear-gradient(45deg, #2f80ed, #56ccf2);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: var(--color-primary);
 }
 
 .section__subtitle {

@@ -1,0 +1,81 @@
+.activities-section {
+  padding: 2rem 1rem;
+}
+
+.activities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.swiper-navigation {
+  display: flex;
+  gap: 1rem;
+}
+.activities-swiper {
+  display: grid;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-xs);
+  background-color: var(--color-light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+.swiper-button-disabled {
+  background-color: var(--color-primary);
+  opacity: 1;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  font-weight: var(--font-weight-medium);
+}
+
+.swiper-button-prev:not(.swiper-button-disabled),
+.swiper-button-next:not(.swiper-button-disabled) {
+  background-color: var(--color-primary);
+}
+
+.activity-card {
+  background-color: var(--color-light-blue);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+
+.activity-card img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  height: 20rem;
+  object-fit: cover;
+  margin-bottom: var(--spacing-sm);
+}
+
+.activity-card h3 {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.activity-card p {
+  font-size: var(--font-size-lg);
+}

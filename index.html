@@ -13,6 +13,11 @@
       integrity="sha384-...your-integrity-key..."
       crossorigin="anonymous"
     />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/general.css" />
@@ -25,21 +30,22 @@
         <img src="./images/logo.png" alt="logo" />
       </div>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="milestones-info">
         <ul class="nav__links">
           <li class="nav__item">
             <a href="#home" class="nav__link">Home</a>
           </li>
           <li class="nav__item">
-            <a href="#milestone-tracker" class="nav__link">Milestones</a>
+            <a href="#our-activities" class="nav__link">Our Activities</a>
           </li>
           <li class="nav__item">
-            <a href="#development-info" class="nav__link">Our Activity</a>
+            <a href="#milestone-tracker" class="nav__link">Milestones</a>
           </li>
+
           <li class="nav__item">
             <a href="#parenting-tips" class="nav__link">Parenting</a>
           </li>
-          <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li>
+
           <li class="nav__item">
             <a href="#community" class="nav__link">Community</a>
           </li>
@@ -66,7 +72,6 @@
           class="carousel slide"
           data-bs-ride="carousel"
         >
-          <!-- Indicators (dots) -->
           <div class="carousel-indicators">
             <button
               type="button"
@@ -89,8 +94,6 @@
               aria-label="Slide 3"
             ></button>
           </div>
-
-          <!-- Slides -->
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
@@ -147,7 +150,6 @@
             </div>
           </div>
 
-          <!-- Arrows -->
           <button
             class="carousel-control-prev"
             type="button"
@@ -167,6 +169,86 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
+        </div>
+      </section>
+
+      <section class="activities-section section" id="our-activities">
+        <div class="activities-header">
+          <h2 class="section__title">Our Activities</h2>
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+
+        <div class="swiper activities-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1: Parenting Seminars -->
+            <div class="swiper-slide activity-card">
+              <img src="./images/seminars.jpg" alt="Parenting Seminars" />
+              <h3>Parenting Seminars</h3>
+              <p>
+                Join informative seminars with experts to enhance your parenting
+                skills and knowledge.
+              </p>
+            </div>
+
+            <!-- Slide 2: Courses for New Parents -->
+            <div class="swiper-slide activity-card">
+              <img src="./images/parentss.jpg" alt="Courses for New Parents" />
+              <h3>Courses for New Parents</h3>
+              <p>
+                Learn the essentials of baby care, safety, and early childhood
+                development.
+              </p>
+            </div>
+
+            <!-- Slide 3: Child Development Courses -->
+            <div class="swiper-slide activity-card">
+              <img
+                src="./images/child-game.jpg"
+                alt="Child Development Courses"
+              />
+              <h3>Child Development Courses</h3>
+              <p>
+                Explore the milestones in a child’s growth and how to support
+                them at every stage.
+              </p>
+            </div>
+
+            <!-- Slide 4: Summer Schools -->
+            <div class="swiper-slide activity-card">
+              <img src="./images/summer-school.jpg" alt="Summer Schools" />
+              <h3>Summer Schools</h3>
+              <p>
+                Give your child the opportunity to learn and play with engaging
+                summer programs.
+              </p>
+            </div>
+
+            <!-- Slide 5: Emergency Assistance Courses -->
+            <div class="swiper-slide activity-card">
+              <img
+                src="./images/emergency.jpg"
+                alt="Emergency Assistance Courses"
+              />
+              <h3>Emergency Assistance Courses</h3>
+              <p>
+                Equip yourself with life-saving skills and learn how to handle
+                emergency situations effectively.
+              </p>
+            </div>
+
+            <!-- Slide 6: Creative Arts Workshops -->
+            <div class="swiper-slide activity-card">
+              <img src="./images/workshop.jpg" alt="Creative Arts Workshops" />
+              <h3>Creative Arts Workshops</h3>
+              <p>
+                Foster your child’s creativity through fun activities like
+                painting, music, and dance.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -278,7 +360,7 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       defer
     ></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="js/script.js"></script>
   </body>
 </html>

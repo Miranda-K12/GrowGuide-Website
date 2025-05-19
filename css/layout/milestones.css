@@ -39,7 +39,9 @@
   padding: var(--spacing-md);
   gap: var(--spacing-md);
   background-color: var(--color-light-blue);
+  overflow: hidden;
 }
+
 .zooming-card {
   opacity: 0;
   transform: scale(0.5);
@@ -61,6 +63,7 @@
   border-radius: var(--radius-sm);
   width: 100%;
 }
+
 .details-card-content {
   grid-column: 1 / -1;
   display: grid;
