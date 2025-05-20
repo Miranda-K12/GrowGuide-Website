@@ -30,9 +30,6 @@
     cursor: pointer;
     z-index: 100;
   }
-  .nav__links .nav__link {
-    color: var(--color-primary);
-  }
 }
 
 @media (max-width: 768px) {
@@ -68,6 +65,11 @@
   .header__search-input {
     width: 100%;
   }
+
+  .nav__links {
+    gap: var(--spacing-sm);
+    justify-content: space-between;
+  }
   .carousel-caption h1 {
     font-size: var(--font-size-xl);
   }
@@ -79,9 +81,11 @@
   }
 }
 @media (max-width: 420px) {
+  .nav__link {
+    font-size: var(--font-size-sm);
+  }
   .footer__form {
     flex-direction: column;
-
     gap: var(--spacing-xl);
   }
   .footer__input,
