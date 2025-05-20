@@ -1,7 +1,7 @@
 export const swiper = new Swiper(".activities-swiper", {
   loop: false,
   slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: 20,
   simulateTouch: false,
   allowTouchMove: false,
   pagination: {
