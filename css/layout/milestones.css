@@ -117,7 +117,12 @@
 .img-animation {
   animation: zooming 0.8s ease-out forwards;
 }
-
+.error-message {
+  color: var(--color-red);
+  font-size: var(--font-size-xl);
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+}
 @media (max-width: 768px) {
   .milestones-section__cards {
     grid-template-columns: repeat(2, 1fr);

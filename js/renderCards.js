@@ -1,6 +1,6 @@
 import { renderAnimations } from "./animations.js";
 import { handleAgeCategories } from "./renderAgeCategories.js";
-import  {renderDetails, toggleCards} from './renderCardDetails.js';
+import { renderDetails, toggleCards } from "./renderCardDetails.js";
 let cardsPerPage = 3;
 let currentPage = 1;
 let totalCards = [];
@@ -26,13 +26,13 @@ export const fetchData = async () => {
 };
 fetchData();
 
-export const renderCard = (page) => {
+export const renderCard = (page, data = totalCards) => {
   const container = document.querySelector(".milestones-section__cards");
   container.innerHTML = "";
 
   const start = (page - 1) * cardsPerPage;
   const end = start + cardsPerPage;
-  const currentItems = totalCards.slice(start, end);
+  const currentItems = data.slice(start, end);
 
   currentItems.forEach((item) => {
     const cardHTML = `
@@ -51,29 +51,25 @@ export const renderCard = (page) => {
 };
 
 //Pagination
-const renderPagination = () => {
+const renderPagination = (data = totalCards) => {
   const paginationContainer = document.querySelector(".pagination");
   paginationContainer.innerHTML = "";
 
-  const totalPages = Math.ceil(totalCards.length / cardsPerPage);
+  const totalPages = Math.ceil(data.length / cardsPerPage);
 
-  // Previus Button
   const prevButton = document.createElement("li");
   prevButton.className = "page-item";
-  prevButton.innerHTML = `
-    <a class="page-link prev" href="#">Previous</a>
-  `;
+  prevButton.innerHTML = `<a class="page-link prev" href="#">Previous</a>`;
   prevButton.addEventListener("click", (e) => {
     e.preventDefault();
     if (currentPage > 1) {
       currentPage--;
-      renderCard(currentPage);
-      renderPagination();
+      renderCard(currentPage, data);
+      renderPagination(data);
     }
   });
   paginationContainer.appendChild(prevButton);
 
-  // Page Number Buttons
   for (let i = 1; i <= totalPages; i++) {
     const pageItem = document.createElement("li");
     pageItem.className = "page-item" + (i === currentPage ? " active" : "");
@@ -87,26 +83,23 @@ const renderPagination = () => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       currentPage = i;
-      renderCard(currentPage);
-      renderPagination();
+      renderCard(currentPage, data);
+      renderPagination(data);
     });
 
     pageItem.appendChild(link);
     paginationContainer.appendChild(pageItem);
   }
 
-  // Next Button
   const nextButton = document.createElement("li");
   nextButton.className = "page-item";
-  nextButton.innerHTML = `
-    <a class="page-link next" href="#">Next</a>
-  `;
+  nextButton.innerHTML = `<a class="page-link next" href="#">Next</a>`;
   nextButton.addEventListener("click", (e) => {
     e.preventDefault();
     if (currentPage < totalPages) {
       currentPage++;
-      renderCard(currentPage);
-      renderPagination();
+      renderCard(currentPage, data);
+      renderPagination(data);
     }
   });
   paginationContainer.appendChild(nextButton);
@@ -123,6 +116,53 @@ window.addEventListener("resize", () => {
     renderCard(currentPage);
   }
 });
+
+//Search Functionality
+
+let searchCards = totalCards;
+const searchInput = document.querySelector(".header__search-input");
+const searchButton = document.querySelector(".header__search-button");
+
+searchButton.addEventListener("click", () => {
+  const userInput = searchInput.value;
+  handleSearch(userInput);
+});
+
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    handleSearch(searchInput.value);
+  }
+});
+
+export const handleSearch = (searchValue) => {
+  const searchTerm = searchValue.toLowerCase().trim();
+
+  // Filter the cards based on the search term
+  searchCards = searchTerm
+    ? totalCards.filter((item) => item.title.toLowerCase().includes(searchTerm))
+    : totalCards;
+
+  currentPage = 1;
+
+  // Handle error message
+  let errorMessage = document.querySelector(".error-message");
+  if (!errorMessage) {
+    errorMessage = document.createElement("h4");
+    errorMessage.className = "error-message";
+    document.querySelector(".milestones__section").appendChild(errorMessage);
+  }
+
+  if (searchCards.length === 0) {
+    errorMessage.style.display = "block";
+    errorMessage.innerHTML = "No results found";
+  } else {
+    errorMessage.style.display = "none";
+    renderCard(currentPage, searchCards);
+    renderPagination(searchCards);
+  }
+
+  searchInput.value = "";
+};
 
 export const setupCardClickHandlers = () => {
   const cards = document.querySelectorAll(".card");
