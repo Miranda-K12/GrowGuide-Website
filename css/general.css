@@ -74,9 +74,8 @@ body {
   margin-bottom: var(--spacing-lg);
   font-weight: var(--font-weight-bold);
   font-style: italic;
-}
-.gradient-title {
   color: var(--color-primary);
+  margin-bottom: var(--spacing-xxl);
 }
 
 .section__subtitle {

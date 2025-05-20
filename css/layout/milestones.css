@@ -1,27 +1,19 @@
-.milestones-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
-  text-align: center;
-  width: 70%;
-  padding: 1.5rem;
-  text-align: center;
+.milestones-section__title {
+  color: var(--color-primary);
 }
-
 .milestones-section__description {
   font-size: var(--font-size-lg);
 }
 .milestones-section__cards {
   margin-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
 }
 
 .btn-outline-primary {
   font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
 }
 .btn-outline-primary:hover {
   background-color: var(--color-light-blue);
@@ -108,7 +100,6 @@
 .back-button {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
-
   position: absolute;
   bottom: var(--spacing-xxl);
   right: var(--spacing-xxl);
@@ -125,4 +116,16 @@
 }
 .img-animation {
   animation: zooming 0.8s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .milestones-section__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .milestones-section__cards {
+    grid-template-columns: 1fr;
+  }
 }

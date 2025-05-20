@@ -1,4 +1,3 @@
-// sidebar.js
 import { renderDetails } from "./renderCardDetails.js";
 import { toggleCards } from "./renderCardDetails.js";
 export const handleAgeCategories = (data) => {
@@ -19,5 +18,3 @@ export const handleAgeCategories = (data) => {
     });
   });
 };
-
-handleAgeCategories();
