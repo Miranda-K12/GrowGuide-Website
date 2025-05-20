@@ -122,6 +122,7 @@
   font-size: var(--font-size-xl);
   text-align: center;
   font-weight: var(--font-weight-medium);
+  margin-top: var(--spacing-lg);
 }
 @media (max-width: 768px) {
   .milestones-section__cards {

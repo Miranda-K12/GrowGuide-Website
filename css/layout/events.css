@@ -23,7 +23,9 @@
   border-radius: var(--radius-sm);
   object-fit: cover;
 }
-
+.event-card-more-btn {
+  font-size: var(--font-size-lg);
+}
 .event-card__content {
   display: flex;
   flex-direction: column;
@@ -41,9 +43,7 @@
   color: var(--color-dark);
   font-style: italic;
 }
-.event-card__content button {
-  width: 40%;
-}
+
 .event-card__date {
   font-size: var(--font-size-lg);
   color: var(--color-dark);
