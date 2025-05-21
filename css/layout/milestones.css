@@ -83,6 +83,10 @@
   display: flex;
   align-items: center;
 }
+.details-header h3 {
+  margin-bottom: 0;
+}
+
 .details-info h4 {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-medium);
@@ -91,7 +95,7 @@
   font-weight: var(--font-weight-bold);
 }
 .section-paragraphs {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   visibility: visible;
 }
 .section-paragraphs p:first-child {
@@ -123,15 +127,4 @@
   text-align: center;
   font-weight: var(--font-weight-medium);
   margin-top: var(--spacing-lg);
-}
-@media (max-width: 768px) {
-  .milestones-section__cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .milestones-section__cards {
-    grid-template-columns: 1fr;
-  }
 }

@@ -55,4 +55,9 @@
 }
 .card-icon {
   margin-right: var(--spacing-md);
+  color: var(--color-primary);
+}
+.event-small-icon {
+  color: var(--color-primary);
+  margin-right: var(--spacing-md);
 }

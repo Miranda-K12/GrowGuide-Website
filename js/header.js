@@ -2,12 +2,13 @@ export const scrollHeader = () => {
   const header = document.querySelector(".header");
   const headerText = header.querySelectorAll(".nav__link");
   const burgerMenu = document.querySelector(".burger-menu");
-
+  const navMenu = document.querySelector(".nav");
   const changeBackground = () => {
     if (window.scrollY > 80) {
       header.style.backgroundColor = "#d1ecfe";
       headerText.forEach((element) => {
         element.style.color = "#0d6efd";
+
         if (burgerMenu) {
           burgerMenu.style.color = "#0d6efd";
         }
